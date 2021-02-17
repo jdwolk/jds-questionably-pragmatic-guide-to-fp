@@ -22,9 +22,7 @@
 
 
 
-# JD's Questionably Pragmatic Guide To Functional Programming Patterns
-
-## 0: HOFs, Partial Application, Point-Free Programming and Currying
+# 0: HOFs, Partial Application, Point-Free Programming and Currying
 
 
 
