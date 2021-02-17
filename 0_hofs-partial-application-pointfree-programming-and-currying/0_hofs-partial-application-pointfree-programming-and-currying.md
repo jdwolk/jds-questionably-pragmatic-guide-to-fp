@@ -460,7 +460,9 @@ Partially applying some arguments before the "full" function gets evaluated
 
 That should sound really familiar since we just did it:
 
+```javascript
 const add100 = addCannedValue(100)
+```
 
 
 
