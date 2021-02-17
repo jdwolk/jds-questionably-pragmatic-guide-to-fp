@@ -24,7 +24,7 @@
 
 # JD's Questionably Pragmatic Guide To Functional Programming Patterns
 
-# 0: HOFs, Partial Application, Point-Free Programming and Currying
+## 0: HOFs, Partial Application, Point-Free Programming and Currying
 
 
 
@@ -68,7 +68,6 @@
 
 
 
-# HOFs
 
 
 
@@ -77,43 +76,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# HOFs: What?
+## HOFs: What?
 
 HOF == "Higher Order Function"
 
@@ -153,7 +116,7 @@ HOF == "Higher Order Function"
 
 
 
-# HOFs: Input - What
+## HOFs: Input - What
 
 Take fn as an argument
 
@@ -193,7 +156,7 @@ Take fn as an argument
 
 
 
-# HOFs: Input - Why
+## HOFs: Input - Why
 
 Lets you "customize"/"configure" a function at runtime
 
@@ -233,7 +196,7 @@ Lets you "customize"/"configure" a function at runtime
 
 
 
-# HOFs: Input - Example
+## HOFs: Input - Example
 
 ```javascript
 const R = require('ramda')
@@ -293,7 +256,7 @@ mapValues(upcase, obj1)
 
 
 
-# HOFs: Output - What
+## HOFs: Output - What
 
 Return a fn as a value from the "parent" fn
 
@@ -332,7 +295,7 @@ Return a fn as a value from the "parent" fn
 
 
 
-# HOFs: Output - Why
+## HOFs: Output - Why
 
 1. So you can dynamically create a function / have a "function builder"
 
@@ -373,7 +336,7 @@ Return a fn as a value from the "parent" fn
 
 
 
-# HOFs Output: Example
+## HOFs Output: Example
 
 So you can dynamically create a function / have a "function builder"
 
@@ -437,7 +400,7 @@ eyeColorGreeting(console.log, person)
 
 
 
-# HOFs Output: Example
+## HOFs Output: Example
 
 So you can delay evaluation of a "full" function
 
@@ -491,7 +454,7 @@ console.log(add42(100))
 
 
 
-# Partial Application: What
+## Partial Application: What
 
 Partially applying some arguments before the "full" function gets evaluated
 
@@ -534,7 +497,7 @@ const add100 = addCannedValue(100)
 
 
 
-# Partial Application: What, again
+## Partial Application: What, again
 
 Using "output" HOFs + "filling in" some args in one call before filling in more args in subsequent calls
 
@@ -570,7 +533,7 @@ Using "output" HOFs + "filling in" some args in one call before filling in more 
 
 
 
-# Partial Application: Why
+## Partial Application: Why
 
 Same reason(s) as "output" HOFs:
 
@@ -613,7 +576,7 @@ But why is that _useful_?
 
 
 
-# Partial Application: Why, again
+## Partial Application: Why, again
 
 So that you can be more expressive / concise ("point free" programming)
 
@@ -649,7 +612,7 @@ So that you can be more expressive / concise ("point free" programming)
 
 
 
-# Partial Application: Example
+## Partial Application: Example
 
 ```javascript
 const R = require('ramda')
@@ -707,7 +670,7 @@ console.log(getNames(people))
 
 
 
-# Aside: Point-free programming? What now?
+## Aside: Point-free programming? What now?
 
 "Points" are variables
 
@@ -746,7 +709,7 @@ console.log(getNames(people))
 
 
 
-# Point-Free Programming: Example
+## Point-Free Programming: Example
 
 ```javascript
 const R = require('ramda')
@@ -803,7 +766,7 @@ console.log(getPersonNamePointFree(person))
 
 
 
-# Currying: What
+## Currying: What
 
 Turning functions with multiple args into a series of "output" HOFs that _each_ take one arg
 
@@ -839,7 +802,7 @@ Turning functions with multiple args into a series of "output" HOFs that _each_ 
 
 
 
-# Currying: Why
+## Currying: Why
 
 To enable partial application + point-free programming
 
@@ -875,7 +838,7 @@ To enable partial application + point-free programming
 
 
 
-# Currying: Example
+## Currying: Example
 
 ```javascript
 // Un-curried
@@ -936,31 +899,41 @@ console.log(resultLast)
 
 
 
-# Wrap-Up
+## Wrap-Up
 
-Input HOFs
+### Input HOFs
+
   What: Take fn as an argument
+
   Why: Let you "customize"/"configure" a function at runtime
 
 
-Output HOFs
+### Output HOFs
+
   What: Return a fn as an argument
+
   Why: So you can dynamically create a function / have a "function builder" +
       So you can delay evaluation of a "full" function
 
 
-Partial application
+### Partial application
+
   What: Partially applying some arguments before the "full" function gets evaluated
+
   Why: Same as Output HOFs + so that you can be more expressive / concise
 
 
-Point-free programming
+### Point-free programming
+
   What: Programming without _explicitly_ supplying varaibles
+
   Why: (Potentially) more expressive code
 
 
-Currying
+### Currying
+
   What: Turning functions with multiple args into a series of "output" HOFs that _each_ take one arg
+
   Why: To enable partial application + point-free programming
 
 
@@ -998,7 +971,7 @@ Currying
 
 
 
-Thanks!
+## Thanks!
 
 
 
